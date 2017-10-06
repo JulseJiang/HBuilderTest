@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>基本样式</title>
+		<style>
+			/*实现奇偶不同色*/
+			li:nth-child(even){
+				
+			}
+			li:nth-child(odd){
+				
+			}
+			a,a:link{
+				text-decoration: none;/*去掉链接的下划线*/
+			}
+			a:visited{
+				/*访问过后的链接*/
+			}
+		</style>
+	</head>
+	<body>
+		<ul>
+			<!--?没有出现序列号-->
+			<!--罗马数字的有序列表-->
+		<!--<ol type="a" start="2">开心就好</ol>
+		<ol type="a" start="2">开心就好</ol>-->
+		<ol  >开心就好</ol>
+		<ol >开心就好</ol>
+		</ul>
+		<!--enctype="application/x-www-form-urlencoded"：提交表单数据时转空格为+号-->
+		<!--http://127.0.0.1:8080/FirstWeb/tabletest.html?myname=happy&mypass=1234+4567+-->
+		<form action="http://127.0.0.1:8080/FirstWeb/tabletest.html?__hbt=1505962135128" method="get" enctype="application/x-www-form-urlencoded">
+			username:<input type="text" name="myname" required  placeholder="please input your name"  /><br/>
+			<!--required:必须填写此字段-->
+			<!--readonly:显示填写的内容，只读，此时required不再起作用-->
+			password:<input type="password" name="mypass" value="happy"/><br/>
+			<input type="file" multiple/>
+			<!--mutiple:实现文件多选-->
+			<input type="submit"  value="提交"/>
+			<input type="reset" value="取消"/>
+			<!--只能清除用户输入的信息，能清楚value中的-->
+		</form>
+		
+		
+	</body> 
+</html>
