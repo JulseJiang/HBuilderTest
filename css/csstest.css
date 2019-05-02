@@ -1,0 +1,19 @@
+#mydiv{
+				width:100px;
+				height: 100px;
+				background-color: royalblue;
+				
+				/*transform: translate();*/
+			}
+			@keyframes name{
+				from{}
+				to{}
+			}
+			@media only screen and (min-width: ) {
+				
+			}
+			@font-face {
+				font-family:;
+				src: url();
+			}
+			

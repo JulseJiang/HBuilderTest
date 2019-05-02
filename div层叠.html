@@ -7,9 +7,11 @@
 			#parent{
 				width: 300px;
 				height: 500px;
-				border: 1px dotted;
+				border-image: -webkit-linear-gradient(
+				 red, blue, yellow, black, white, green) 1 1;
 				margin: auto;
 				position: relative;
+				box-shadow:  15px 15px 10px yellow;
 			}
 			#parent div{
 				width: 100px;
@@ -46,7 +48,7 @@
 		<div id="parent">
 			<div id="div1"></div>
 			<div id="div2"></div>
-			<div id="div3"></div>
+			<div id="div3" style="background-color: royalblue;"></div>
 		</div>
 	</body>
 </html>

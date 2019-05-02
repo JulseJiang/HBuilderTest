@@ -38,11 +38,16 @@
 			password:<input type="password" name="mypass" value="happy"/><br/>
 			<input type="file" multiple/>
 			<!--mutiple:实现文件多选-->
-			<input type="submit"  value="提交"/>
-			<input type="reset" value="取消"/>
+			<input type="submit"  value="提交" onclick="myClick()"/>
+			<!--不推荐使用-->
+			<input type="reset" value="取消" onclick="alert('girl')"/>
 			<!--只能清除用户输入的信息，能清楚value中的-->
 		</form>
-		
+		<script>
+			function myClick(){
+				alert('hello');
+			}
+		</script>
 		
 	</body> 
 </html>

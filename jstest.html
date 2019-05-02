@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title >js测试</title>
+		<style>
+			.setGreen{
+				
+				background-color: #008000;
+			}
+			.setYellow{
+				background-color: yellow;
+			}
+
+		</style>
+	</head>
+	<body>
+		<h1>开心就好</h1> 
+		<ul>
+			<li>上海</li>
+			<li>北京</li>
+			<li>成都</li>
+			<li>包头</li>
+			
+		</ul>
+		<a href="exe1.html" >跳转到其他界面</a>
+		<input type="button" id="btn_submit" value="提交"/>
+		<input type="button" id="btn_cancel" value="取消" />
+		<p>
+			<label>&nbsp;x:&nbsp;</label><span id='pagex'></span>
+			<label>&nbsp;y:&nbsp;</label><span id='pagey'></span>
+			
+		</p>
+		<!--style="border:1px solid black;
+			width:auto;height:51px;overflow:scroll;"-->
+		<div id="div1" class="setGreen">
+			<p  hidden="hidden">
+			化学实验室
+		</p>
+		<p id="physic_lab">
+			物理实验室
+		</p>
+		<p>
+			生物实验室
+		</p>
+		</div>
+		<form>
+			<input type="text" value="huangbo" id="myname1" checked="checked" class="myclass"/>
+		<div id = "mydiv">
+			<input type="text" value="huangyun" id="myname2" class="myclass"/>
+		</div>
+		<!--<input type="button" id="btn_submit" value="提交"/>
+		<input type="button" id="btn_cancel" value="取消" />-->
+		</form>
+		<input type="button" id="btn_Play" value="Play Game"/>
+		<input type="button" id="btn_Pause" value="Pause Game"/>
+		
+		<input type="checkbox" checked="checked" value="同意"/>
+		<input type="checkbox"  value="同意"/>
+		<input type="checkbox" checked="checked" value="同意"/>
+		<input type="checkbox" checked="checked" value="同意"/>
+		<input type="checkbox" checked="checked" value="同意"/>
+		
+		<input type="button" onclick="setfous()" value="获得焦点" />
+		<input type="button" onclick="lostfous()" value="丢失焦点" />
+		
+		<select multiple="multiple">
+			<option>北京</option>
+			<option>上海</option>
+			<option>台湾</option>
+			<option>重庆</option>
+			
+		</select>
+		<script src="js/jquery-3.1.1.min.js"></script>
+		<script type="text/javascript" src="js/test01.js" ></script>
+		<script>
+//			alert('hello world');
+
+$(function(){
+//	alert("DOM树构建完成之后再运行");
+//	alert($(".myclass").val());
+});
+		</script>
+	</body>
+</html>
+
+

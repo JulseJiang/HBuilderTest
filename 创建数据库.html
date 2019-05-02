@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<script>
+			if(window.openDatabase == undefined) {
+				alert('你的浏览器不支持数据库');
+			} else {
+				var dbs = window.openDatabase('mydatabase', 'v1.0', 'save data db', 100);
+				if(dbs) {
+					alert('创建成功');
+				} else {
+					alert('创建失败');
+				}
+			}
+			
+			
+			var db = openDatabase('mydb', '1.0', 'Test DB', 2 * 1024 * 1024);
+ 
+db.transaction(function (tx) {
+   tx.executeSql('CREATE TABLE IF NOT EXISTS LOGS (id unique, log)');
+   tx.executeSql('INSERT INTO LOGS (id, log) VALUES (1, "菜鸟教程")');
+   tx.executeSql('INSERT INTO LOGS (id, log) VALUES (2, "www.runoob.com")');
+});
+ 
+db.transaction(function (tx) {
+   tx.executeSql('SELECT * FROM LOGS', [], function (tx, results) {
+      var len = results.rows.length, i;
+      msg = "<p>查询记录条数: " + len + "</p>";
+      document.querySelector('#status').innerHTML +=  msg;
+    
+      for (i = 0; i < len; i++){
+         alert(results.rows.item(i).log );
+      }
+    
+   }, null);
+});
+		</script>
+	</body>
+
+</html>

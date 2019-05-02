@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>css实现的menu</title>
+<style type="text/css">
+.menu {
+   z-index:3;
+   font-size: 12px;
+}
+.menu ul {
+   padding: 0;
+   margin: 0;
+   list-style-type: none;
+   width: 100px;
+   position: relative;
+}
+.menu li {
+   background: #AFDD22;
+   height: 26px;
+   position: relative; 
+}
+.menu li {
+   float: left;
+   margin-left: -16px;
+   margin-left: 0;
+   position: relative; 
+}
+ 
+.menu a, .menu a:visited {
+   display: block;
+   text-decoration: none;
+   height: 25px;
+   line-height: 25px;
+   width: 100px;
+   text-indent: 5px;
+   border-bottom: 1px solid #fff;
+}
+.menu a:hover {
+   color: #fff;
+   background: #40DE5A;
+}
+
+.menu ul ul {
+   /*visibility: hidden;*/
+   position: absolute;
+   top: -1px;
+   left: 100px;
+}
+.menu ul li:hover ul, .menu ul a:hover ul {
+   visibility: visible;
+}
+.menu ul :hover ul ul {
+   visibility: hidden;
+}
+.menu ul :hover ul :hover ul {
+   visibility: visible;
+}
+
+</style>
+</head>
+<body>
+<div class="menu">
+   <ul><!--ul是目录 li是具体数据，每个ul里面有li ,然后li 里面有ul和li 最终数据是在li里面 -->
+     <li><a href="#">菜单一» </a>
+       <ul>
+         <li><a href="#">菜单一1» </a>
+           <ul>
+             <li><a href="#">菜单一1-1</a> </li>
+             <li><a href="#">菜单一1-2 </a> </li>
+           </ul>
+         </li>
+         <li><a href="#">菜单一2</a></li>
+         <li><a href="#">菜单一3　　»</a>
+           <ul>
+             <li><a href="#">菜单一3-1</a> </li>
+             <li><a href="#">菜单一3-2</a> </li>
+           </ul> 
+         </li>
+       </ul>
+     </li>
+     <li><a href="#">菜单二</a></li>
+   </ul>
+</div>
+</body>
+</html>

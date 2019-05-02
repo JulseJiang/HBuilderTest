@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!--css3动画规则-->
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#mydiv{
+				width:100px;
+				height: 100px;
+				background-color: royalblue;
+				/*animation: myanim 2s 2 alternate;
+				-webkit-animation: myanim 2s 2 alternate;*/
+				
+				animation: myanim 2s infinite linear;
+				-webkit-animation: myanim 2s infinite linear;
+			}
+			@keyframes myanim{
+				from{
+					transform: rotate(0deg);
+				}
+				to{
+					transform: rotate(-360deg);
+					}
+			}
+			@-webkit-keyframes myanim{
+				from{
+					transform: rotate(0deg);
+				}
+				to{
+					transform: rotate(360deg);
+					}
+			}
+		</style>
+	</head>
+	<body>
+		<div id="mydiv">hello</div>
+	</body>
+</html>

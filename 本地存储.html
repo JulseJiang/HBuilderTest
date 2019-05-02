@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<label>输入的值：</label><input type="text" id="str" value="kkk" />
+		<input type="button" id="btn" value="修改localstorage" onclick="refresh();"/><br />
+		<label>键名:<span id="name">keep</span>&nbsp;现在的值：<span id="value"></span>&nbsp;过去的值<span id="oldvalue"></span></label>
+		<script>
+			if(window.localStorage){//本地存储，手动清除
+				var obj = {'key':'world','key2':'hello'}
+//				alert(localStorage.getItem('obj'));
+				localStorage.setItem('obj',obj);
+//				alert('support');
+			}
+			if(window.sessionStorage){//会话存储，关闭浏览器时清除
+//				alert('support');
+			}
+			function refresh(){
+				var str = document.getElementById('str');
+				var btn = document.getElementById('btn');
+				var name = document.getElementById('name');
+				var value = document.getElementById('value');
+				var oldvalue = document.getElementById('oldvalue');
+				
+				var keep = sessionStorage.getItem('keep');
+				oldvalue.innerText=keep;
+				value.innerHTML = str.value;
+				sessionStorage.setItem('keep',str.value);
+			}
+		</script>
+	</body>
+</html>
